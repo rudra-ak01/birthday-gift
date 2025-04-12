@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: poppins, sans-serif;
+    transition: all 0.2s ease-in-out;
 
 }
 
@@ -13,57 +15,118 @@ body {
     text-align: center;
 }
 
-.home {
-    /* background: #3498db; */
-    color: white;
-    height: 100vh;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 60px;
-}
-.home button{
+/* .home {
+  color: white;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 60px;
+}   */
+/* .home button{
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    /* padding: 10px 20px; */
+
     width: 10em;
     height: 2em;
     border-radius: 20px;
     font-family: cursive;
     color: red;
     font-weight: bolder;
-    background-color: transparent;
+    background-color: #a139eb73;
     cursor: pointer;
-}
-.hero {
+}  */
+ /* .hero {
     height: 450px;
     background-color: #4B0082;
     padding: 50px 20px;
     color: #fff;
     position: relative;
     animation: fadeIn 2s ease-in-out;
-}
+} */
 
-.hero img {
+/* .hero img {
     border-radius: 50%;
     max-width: 150px;
     margin-bottom: 20px;
-}
+}  */
 
-h1 {
+ /* h1 {
     font-size: 3rem;
     font-weight: bold;
     color: #FFD700;
-}
-.message {
+} */
+/* .message {
     font-size: 1.2rem;
     margin-bottom: 20px;
+} */
+
+
+.bdy {
+  background: #008888;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
+.card {
+  background: #fdfdfd;
+  border-radius: 4px;
+  height: 85vh;
+  width: 80vw;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 1000px) {
+  .card {
+    flex-direction: row-reverse;
+  }
+  .card img.birthday {
+    width: 100%;
+    max-width: 50vw;
+    max-height: unset;
+  }
+}
+
+@media only screen and (max-height: 640px) {
+  .card {
+    flex-direction: row-reverse;
+  }
+  .card img.birthday {
+    width: 100%;
+    max-width: 50vw;
+    max-height: unset;
+  }
+}
+
+img.birthday {
+  max-height: 40vh;
+}
+
+.text {
+  padding: 1em;
+}
+
+.muted {
+  opacity: 0.8;
+}
+
+.space {
+  height: 100px;
+} 
 #countdown {
     font-size: 2rem;
     color: #ffdf00;
