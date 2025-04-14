@@ -1,5 +1,5 @@
 // Countdown Timer
-const countdownDate = new Date("May 01, 2025 00:00:00").getTime();
+const countdownDate = new Date("MAY 01, 2025 00:00:00").getTime();
 let countdownInterval = setInterval(function() {
     let now = new Date().getTime();
     let distance = countdownDate - now;
@@ -11,11 +11,19 @@ let countdownInterval = setInterval(function() {
 
     document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
     
+    document.getElementById("btn").disabled = true;
+
+
     if (distance < 0) {
         clearInterval(countdownInterval);
+        document.getElementById("btn").disabled = false;
         document.getElementById("countdown").innerHTML = "Happy Birthday, Tinu!";
     }
 }, 1000);
+
+document.getElementById("btn").addEventListener("click", ()=> {
+  window.location="gift.html";
+});
 
 function createBalloons(count = 30) {
     const container = document.getElementById("balloon-container");

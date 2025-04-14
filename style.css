@@ -129,7 +129,7 @@ img.birthday {
 } 
 #countdown {
     font-size: 2rem;
-    color: #ffdf00;
+    color: rgb(233, 101, 57);
 }
 /*footer section*/
 footer {
@@ -239,4 +239,8 @@ footer p {
       width: 150px;
       height: 150px;
     }
+  }
+
+  .message p{
+    font-family: cursive;
   }
